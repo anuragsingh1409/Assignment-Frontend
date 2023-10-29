@@ -8,7 +8,7 @@ function App() {
  
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get(`http://localhost:8000`);
+      const res = await axios.get(`https://assignment-backend-lilac.vercel.app/`);
       setData(res.data);
     };
      fetchData();

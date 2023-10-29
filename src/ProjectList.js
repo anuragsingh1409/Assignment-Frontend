@@ -9,10 +9,10 @@ const ProjectList = ({data}) => {
     const [open, setOpen] = useState(false);
     const [query, setQuery] = useState("");
       data.sort((a, b)=>{
-        const aNum = a.Project.Title;
-        const bNum = b.Project.Title;
+        const aNum = parseInt(a.Project.Title.split(" ")[1]);
+        const bNum = parseInt(b.Project.Title.split(" ")[1]);
         console.log(aNum, bNum);
-        return (aNum)>(bNum)?1:0})
+        return aNum-bNum})
       console.log(data);
       const openIt = (e) => {
         setOpenData(e);
